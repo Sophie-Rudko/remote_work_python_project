@@ -1,0 +1,2 @@
+I still have my jupiter notebook in my project folder, but it's more like a draft, nothing is designed to be shown there. The file for display is front.py.
+Unfortunately the forms only work when you run the application locally on your computer, as you also need to run the back.py file with FastAPI on your computer for it to deploy to the local host.
