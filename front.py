@@ -17,6 +17,8 @@ st.text("In this report, we'll look at how remote working affects people from di
 
 st.text("My dataset includes both demographic data (e.g., age, region, experience level) and work-related factors (e.g., hours worked, remote work ratio, company support for remote work). It also includes mental health indicators, such as stress levels, sleep quality, social isolation, and work satisfaction.")
 
+st.text("By the way, I still have my jupiter notebook in my project folder, but it's more like a draft, nothing is designed to be shown there. The file for display is front.py.")
+
 st.subheader("Data cleanup", divider="violet")
 
 st.text("First, I checked that all the data types were correct and checked for empty values. I had empty values in the Mental_Health_Condition and Physical_Activity columns, but the number of these values in both columns exceeded 1000, and I only have 5000 rows. Since I didn't plan to use the data from these columns anywhere, I just deleted these columns.")
