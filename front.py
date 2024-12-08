@@ -234,6 +234,7 @@ st.text(f'The average life and work balance rating if you filter the dataset so 
 st.text('We got around 3, not 2, so we were almost right.')
 
 st.subheader("FastAPI", divider="red")
+st.write("Unfortunately the forms only work when you run the application locally on your computer, as you also need to run the back.py file with FastAPI on your computer for it to deploy to the local host.")
 st.write("(!Make sure the FastApi host is running for the forms to work!)")
 st.write("This is a form with which you can get the average value of some factor by part of the world (so that you don't have to search for values on the plot suggested earlier) using GET method.")
 # Display form
