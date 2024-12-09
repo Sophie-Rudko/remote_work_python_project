@@ -5,3 +5,6 @@ seaborn
 numpy
 pandas
 requests
+fastapi
+uvicorn
+pydantic
