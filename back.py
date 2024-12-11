@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
-from data_prep import df, transform_stress, transform_satisfaction, transform_sleep, df_factors_add
+from data_prep import df_factors, transform_stress, transform_satisfaction, transform_sleep, df_factors_add
 #import front
 #from front import add_new_row
 #from model import predict_salary, reg, enc
@@ -17,7 +17,7 @@ async def root(message: str):
 
 @app.get('/part_world')
 async def get_world_mean(region: str, factor: str): #checking the data type
-    ans: float = round(df[df.Region == region]['_'.join(factor.split())].mean(), 2)
+    ans: float = round(df_factors[df_factors.Region == region]['_'.join(factor.split())].mean(), 2)
     return {
         "result": ans
     }
@@ -87,7 +87,7 @@ async def new_row(data: NewRowRequest):
         "Ratio_of_Virtual_Meetings_to_Hours_Worked_Per_Week": meets / hours
     }
     # Setting the new Employee_ID for the new row
-    new_employee_id = df.index.max() + 1 if not df.empty else 1
+    new_employee_id = df_factors.index.max() + 1 if not df_factors.empty else 1
 
     # Adding the new row to the DataFrame
     df_factors_add.loc[new_employee_id] = new_row
