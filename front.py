@@ -299,7 +299,7 @@ with st.form("post_form"):
     satisf_work = st.selectbox("Satisfaction with Remote Work",
                                options=df['Satisfaction_with_Remote_Work'].unique().tolist())
     region = st.selectbox("Region", options=df['Region'].unique().tolist())
-    balance = st.slider("Work Life Balance", step=1, max_value=7, min_value=1)
+    balance = st.slider("Work Life Balance", step=1, max_value=5, min_value=1)
     isol = st.slider("Social Isolation", step=1, max_value=5, min_value=1)
     sleep = st.select_slider("Sleep Quality", options=["Poor", "Average", "Good"])
     stress = st.select_slider("Stress Level", options=["Low", "Medium", "High"])
